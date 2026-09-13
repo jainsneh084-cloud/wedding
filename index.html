@@ -393,7 +393,7 @@
             box-shadow: 0 15px 30px rgba(163, 26, 43, 0.6);
         }
 
-        /* --- NEW: Couple Gallery Section --- */
+        /* --- Couple Gallery Section --- */
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -418,89 +418,9 @@
             z-index: 2;
         }
 
-        /* --- NEW: RSVP Section --- */
+        /* --- RSVP Section (Image Only) --- */
         #rsvp-section {
             background-color: #fdf5f7;
-        }
-
-        .rsvp-form {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            max-width: 500px;
-            margin: 30px auto 0;
-            text-align: left;
-        }
-
-        .form-group {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-
-        .form-group label {
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
-            color: #8a1523;
-            font-size: 1.1rem;
-        }
-
-        .form-group input, 
-        .form-group select, 
-        .form-group textarea {
-            padding: 15px;
-            border: 2px solid #e0d0d5;
-            border-radius: 10px;
-            font-family: 'Lato', sans-serif;
-            font-size: 1rem;
-            background-color: #fff;
-            transition: border-color 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .form-group input:focus, 
-        .form-group select:focus, 
-        .form-group textarea:focus {
-            outline: none;
-            border-color: #a31a2b;
-            box-shadow: 0 0 10px rgba(163, 26, 43, 0.2);
-        }
-
-        .btn-submit {
-            padding: 18px;
-            background-color: #a31a2b;
-            color: #fff;
-            border: none;
-            border-radius: 50px;
-            font-family: 'Playfair Display', serif;
-            font-size: 1.2rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 20px rgba(163, 26, 43, 0.3);
-            margin-top: 10px;
-        }
-
-        .btn-submit:hover {
-            background-color: #8a1523;
-            color: #d4af37;
-            transform: translateY(-3px);
-            box-shadow: 0 15px 30px rgba(163, 26, 43, 0.5);
-        }
-
-        #rsvp-success {
-            display: none;
-            text-align: center;
-            padding: 40px 20px;
-            background: #fff;
-            border-radius: 15px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            border-top: 5px solid #a31a2b;
-            margin-top: 30px;
-            animation: fadeIn 0.5s ease;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
         }
 
         /* Responsive Design */
@@ -630,7 +550,7 @@
             </div>
         </section>
 
-        <!-- NEW Section 7: Couple Gallery -->
+        <!-- Section 7: Couple Gallery -->
         <section id="gallery-section" class="section reveal">
             <div class="content-box" style="max-width: 1000px;">
                 <h2 class="subtitle">Our Gallery</h2>
@@ -644,40 +564,12 @@
             </div>
         </section>
 
-        <!-- NEW Section 8: RSVP -->
+        <!-- Section 8: RSVP (Image Only) -->
         <section id="rsvp-section" class="section reveal">
             <div class="content-box">
                 <h2 class="subtitle">RSVP</h2>
-                <p style="color: #666; font-size: 1.1rem; margin-bottom: 20px;">Please let us know if you can make it!</p>
-                
-                <form class="rsvp-form" id="rsvp-form">
-                    <div class="form-group">
-                        <label for="name">Full Name</label>
-                        <input type="text" id="name" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="guests">Number of Guests</label>
-                        <input type="number" id="guests" min="1" max="10" value="1" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="attendance">Will you attend?</label>
-                        <select id="attendance" required>
-                            <option value="" disabled selected>Select an option</option>
-                            <option value="yes">Yes, I will be there!</option>
-                            <option value="no">Sorry, I can't make it.</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message (Optional)</label>
-                        <textarea id="message" rows="4" placeholder="Send your wishes..."></textarea>
-                    </div>
-                    <button type="submit" class="btn-submit">Send RSVP</button>
-                </form>
-
-                <div id="rsvp-success">
-                    <h3 style="font-family: 'Great Vibes', cursive; font-size: 3rem; color: #8a1523; margin-bottom: 10px;">Thank You!</h3>
-                    <p style="color: #555; font-size: 1.1rem;">Your RSVP has been received. We can't wait to celebrate with you!</p>
-                </div>
+                <!-- YOUR RSVP IMAGE -->
+                <img src="Rajeev1.jpg" alt="RSVP" class="main-img">
             </div>
         </section>
 
@@ -765,19 +657,7 @@
 
             }, 1000);
 
-            // 5. RSVP Form Submission
-            const rsvpForm = document.getElementById('rsvp-form');
-            const rsvpSuccess = document.getElementById('rsvp-success');
-
-            rsvpForm.addEventListener('submit', (e) => {
-                e.preventDefault(); // Prevents the page from refreshing
-                
-                // Here you would normally send the data to a server.
-                // For this blueprint, we just hide the form and show a success message.
-                
-                rsvpForm.style.display = 'none';
-                rsvpSuccess.style.display = 'block';
-            });
+            // RSVP form script removed — section now uses an image only.
         });
     </script>
 </body>
